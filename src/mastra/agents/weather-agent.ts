@@ -1,13 +1,12 @@
-import { openai } from '@ai-sdk/openai';
-import { Agent } from '@mastra/core/agent';
-import { Memory } from '@mastra/memory';
-import { LibSQLStore } from '@mastra/libsql';
-import { weatherTool } from '../tools/weather-tool';
-import azure from '../internals/azure-openai';
+import { Agent } from "@mastra/core/agent";
+import { LibSQLStore } from "@mastra/libsql";
+import { Memory } from "@mastra/memory";
+import azure from "../internals/azure-openai";
+import { weatherTool } from "../tools/weather-tool";
 
 export const weatherAgent = new Agent({
-  name: 'Weather Agent',
-  instructions: `
+	name: "Weather Agent",
+	instructions: `
       You are a helpful weather assistant that provides accurate weather information and can help planning activities based on the weather.
 
       Your primary function is to help users get weather details for specific locations. When responding:
@@ -21,11 +20,11 @@ export const weatherAgent = new Agent({
 
       Use the weatherTool to fetch current weather data.
 `,
-  model: azure(process.env.AZURE_OPENAI_MODEL_CHAT!),
-  tools: { weatherTool },
-  memory: new Memory({
-    storage: new LibSQLStore({
-      url: 'file:../mastra.db', // path is relative to the .mastra/output directory
-    }),
-  }),
+	model: azure(process.env.AZURE_OPENAI_MODEL_CHAT!),
+	tools: { weatherTool },
+	memory: new Memory({
+		storage: new LibSQLStore({
+			url: "file:../mastra.db", // path is relative to the .mastra/output directory
+		}),
+	}),
 });
