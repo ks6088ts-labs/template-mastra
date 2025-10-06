@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ai-sdk/azure':
+        specifier: ^2.0.42
+        version: 2.0.42(zod@3.25.76)
       '@ai-sdk/openai':
         specifier: ^2.0.42
         version: 2.0.42(zod@3.25.76)
@@ -42,6 +45,12 @@ packages:
   '@a2a-js/sdk@0.2.5':
     resolution: {integrity: sha512-VTDuRS5V0ATbJ/LkaQlisMnTAeYKXAK6scMguVBstf+KIBQ7HIuKhiXLv+G/hvejkV+THoXzoNifInAkU81P1g==}
     engines: {node: '>=18'}
+
+  '@ai-sdk/azure@2.0.42':
+    resolution: {integrity: sha512-NnxFXAPKx8zWgh8vkOfVZOJZwu8SXfilLPHgy17evVtZrGXpaA/aC0TvbmjuKVBc5ZYYow4l3FkWzYux+Edk/A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4.1.8
 
   '@ai-sdk/gateway@1.0.23':
     resolution: {integrity: sha512-ynV7WxpRK2zWLGkdOtrU2hW22mBVkEYVS3iMg1+ZGmAYSgzCqzC74bfOJZ2GU1UdcrFWUsFI9qAYjsPkd+AebA==}
@@ -2985,6 +2994,13 @@ snapshots:
       uuid: 11.1.0
     transitivePeerDependencies:
       - supports-color
+
+  '@ai-sdk/azure@2.0.42(zod@3.25.76)':
+    dependencies:
+      '@ai-sdk/openai': 2.0.42(zod@3.25.76)
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.10(zod@3.25.76)
+      zod: 3.25.76
 
   '@ai-sdk/gateway@1.0.23(zod@3.25.76)':
     dependencies:
