@@ -11,18 +11,17 @@ install-deps-dev: ## install dependencies for development
 
 .PHONY: format-check
 format-check: ## format check
-	@echo "Yet to be implemented"
-
-.PHONY: format
-format: ## format code
-	@echo "Yet to be implemented"
+	@pnpm exec biome format
 
 .PHONY: fix
-fix: format ## apply auto-fixes
+fix: ## apply auto-fixes
+	@pnpm exec biome format --write
+	@pnpm exec biome lint --write
+	@pnpm exec biome check --write --unsafe
 
 .PHONY: lint
 lint: ## lint
-	@echo "Yet to be implemented"
+	@pnpm exec biome lint
 
 .PHONY: test
 test: ## run tests
