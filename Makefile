@@ -34,6 +34,10 @@ build: ## build applications
 .PHONY: ci-test
 ci-test: install-deps-dev format-check lint test build ## run CI test
 
+.PHONY: update
+update: ## update dependencies
+	pnpm update --latest
+
 .PHONY: run
 run: ## run applications
 	pnpm dev
