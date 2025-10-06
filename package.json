@@ -17,7 +17,7 @@
     "node": ">=20.9.0"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^2.0.42",
+    "@ai-sdk/azure": "^2.0.42",
     "@mastra/core": "^0.20.0",
     "@mastra/libsql": "^0.15.1",
     "@mastra/loggers": "^0.10.15",

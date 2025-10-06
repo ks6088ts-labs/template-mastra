@@ -60,7 +60,15 @@ $ pnpm create mastra@latest
 Set up Git repository
 
 ```shell
+# move to project directory
+$ cd template-mastra
+
+# start development server
+$ pnpm run dev
+
 # Initialize a new Git repository
 $ git init; git add .; git commit -m "Initial commit"
-
+$ gh repo create ks6088ts-labs/template-mastra --public --source=. --remote=origin --push
 ```
+
+Support Azure OpenAI: [AI SDK > Azure OpenAI Provider](https://ai-sdk.dev/providers/ai-sdk-providers/azure)
