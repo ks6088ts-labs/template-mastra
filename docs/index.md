@@ -72,3 +72,10 @@ $ gh repo create ks6088ts-labs/template-mastra --public --source=. --remote=orig
 ```
 
 Support Azure OpenAI: [AI SDK > Azure OpenAI Provider](https://ai-sdk.dev/providers/ai-sdk-providers/azure)
+
+## References
+
+- [Mastra Documentation](https://mastra.ai/en/docs/)
+- [Creating a Dockerfile](https://mastra.ai/en/docs/deployment/cloud-providers/aws-lambda#creating-a-dockerfile)
+- [Mastra で作る AI エージェント入門](https://zenn.dev/serinuntius/books/4346a0fc6818f3)
+- [AI エージェント開発/運用入門 > 第 5 章 Mastra でフルスタック Web アプリを作ろう](https://github.com/minorun365/agent-book/tree/main/chapter5)
